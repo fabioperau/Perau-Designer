@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perau Designer</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+      <img src="imagem/perau_site.png" class="logo_pequena" alt="Logo Perau">
+ </header>
+ <div class="header" id="header">
+   <button onclick = "toggleSidebar()" class="btn_icon_header">
+       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+           <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+         </svg>
+   </button>
+   <div class="logo_header">
+       <img src="imagem/perau_site.png" class="img_logo_header" alt="logo_p">
+   </div>
+   <div class="nagivation_header" id="nagivation_header">
+       <button onclick = "toggleSidebar()" class="btn_icon_header">
+           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+               <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+             </svg>
+       </button>
+       <a href="index.html" class="active">Home</a>
+       <a href="sobre_nos.html">Sobre nós</a>
+       <a href="contato.html">Contato</a>
+       <a href="Fazer_login.html">Fazer Login</a>
+   </div>
+</div>
+<div tabindex="0" onclick="closeSidebar()" class="content" id="content">
+   <h1>Categoria</h1>
+</div>
+</body>
+<script>
+var header = document.getElementById('header');
+var nagivationHeader = document.getElementById('nagivation_header')
+var content = document.getElementById('content');
+var showSidebar = false;
+
+function toggleSidebar()
+{
+   showSidebar = !showSidebar;
+   if(showSidebar)
+   {
+       nagivationHeader.style.marginLeft = '-12vw';
+       nagivationHeader.style.animationName = 'showSidebar';
+       content.style.filter = 'blur(2px)';
+   }
+   else
+   {
+       nagivationHeader.style.marginLeft = '-100vw';
+       nagivationHeader.style.animationName = '';
+       content.style.filter = '';
+   }
+}
+
+function closeSidebar()
+{
+   if(showSidebar)
+   {
+       toggleSidebar();
+   }
+}
+
+window.addEventListener('resize', function(event){
+   if(window.innerWidth > 770 && showSidebar)
+   {
+       toggleSidebar();
+   }
+});
+</script>
+    
+    <!-- Slideshow container -->
+    <div class="slideshow-container">
+
+    <!-- Full-width images with number and caption text -->
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 3</div>
+      <img src="imagem/cartãov1.png" style="width:100%;">
+      <div class="text">Caption Text</div>
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 3</div>
+      <img src="imagem/catão de visita dani.png" style="width:100%;">
+      <div class="text">Caption Two</div>
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 3</div>
+      <img src="imagem/dani cartão de visita frente pronto.png" style="width:100%;">
+      <div class="text">Caption Three</div>
+    </div>
+  
+    <!-- Next and previous buttons -->
+    
+    </div>
+    <br>
+  
+    <!-- The dots/circles -->
+    <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+    <script src="script.js"></script> 
+
+    <main>
+        
+          <div class="titulo">
+            <h2 id="pergunta">
+              O Que precisa? 
+            </h2>
+         
+ <div class="escolha" id="escolha">
+   <button onclick = "toggleSideba()" class="btn_icon_escolha">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+      <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+    </svg>
+   </button>
+   <div class="logo_header">
+       <img src="imagem/perau_site.png" class="img_logo_header" alt="logo_p">
+   </div>
+   <div class="nagivation_escolha" id="nagivation_escolha">
+       <button onclick = "toggleSideba()" class="btn_icon_escolha">
+           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+               <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+             </svg>
+       </button>
+       <a href="logo_identidade_visual.html" class="active">Logo identidade e visual</a>
+       <a href="design_site_app.html">Design de site e aplicativo</a>
+       <a href="propaganda.html">Propaganda</a>
+       <a href="embalagem_rotulo.html">Embalagem e rótulo</a>
+       <a href="livro_revista.html">Livro e revista</a>
+   </div>
+</div>
+<div tabindex="0" onclick="closeSideba()" class="content" id="content">
+   <h1 class="vamos">Vamos escolher</h1>
+</div>
+</body>
+<script>
+    var escolha = document.getElementById('escolha');
+    var nagivationescolha = document.getElementById('nagivation_escolha')
+    var content = document.getElementById('content');
+    var showSideba = false;
+
+function toggleSideba()
+{
+   showSideba = !showSideba;
+   if(showSideba)
+   {
+       nagivationescolha.style.marginLeft = '-65vw';
+       nagivationescolha.style.animationName = 'showSidebar';
+       content.style.filter = 'blur(2px)';
+   }
+   else
+   {
+       nagivationescolha.style.marginLeft = '-135vw';
+       nagivationescolha.style.animationName = '';
+       content.style.filter = '';
+   }
+}
+
+function closeSideba()
+{
+   if(showSideba)
+   {
+       toggleSideba();
+   }
+}
+
+window.addEventListener('resize', function(event){
+   if(window.innerWidth > 816 && showSideba)
+   {
+       toggleSideba();
+   }
+});
+</script>
+            
+    
+        
+    </main>
+    <footer>
+      <div class="foote">
+        <div class="foot">
+        <h4>Empresa</h4>
+        <ul>
+          <li>Sobre</li>
+          <li>Contato</li>
+        </ul>
+      </div>
+      <div class="foot">
+        <h4>Serviços de design</h4>
+        <ul>
+          <li>Design de logotipos</li>
+          <li>Cartão de visita</li>
+          <li>Design de Site</li>
+          <li>Design de capas de livro</li>    
+        </ul>
+      </div>
+      <div class="foot">
+        <h4>Recursos</h4>
+        <ul>
+          <li>Ideias de logo</li>
+          <li>Ideias para camisas</li>
+          <li>Ajuda</li>
+        </ul>
+      </div>
+    </div>
+    <h5>Perau designs Termos de Uso Privacidade português</h5>
+    </footer>
+</body>
+</html>
