@@ -119,74 +119,100 @@ window.addEventListener('resize', function(event){
               O Que precisa? 
             </h2>
          
- <div class="escolha" id="escolha">
-   <button onclick = "toggleSideba()" class="btn_icon_escolha">
+     <div class="escolha" id="escolha">
+     <button onclick = "toggleSideba()" class="btn_icon_escolha">
     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
       <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-    </svg>
-   </button>
-   <div class="logo_header">
+     </svg>
+     </button>
+     <div class="logo_header">
        <img src="imagem/perau_site.png" class="img_logo_header" alt="logo_p">
-   </div>
-   <div class="nagivation_escolha" id="nagivation_escolha">
+        </div>
+     <div class="nagivation_escolha" id="nagivation_escolha">
        <button onclick = "toggleSideba()" class="btn_icon_escolha">
            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
                <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
-             </svg>
+           </svg>
        </button>
        <a href="logo_identidade_visual.html" class="active">Logo identidade e visual</a>
        <a href="design_site_app.html">Design de site e aplicativo</a>
        <a href="propaganda.html">Propaganda</a>
        <a href="embalagem_rotulo.html">Embalagem e rótulo</a>
        <a href="livro_revista.html">Livro e revista</a>
-   </div>
-</div>
-<div tabindex="0" onclick="closeSideba()" class="content" id="content">
-   <h1 class="vamos">Vamos escolher</h1>
-</div>
-</body>
-<script>
-    var escolha = document.getElementById('escolha');
-    var nagivationescolha = document.getElementById('nagivation_escolha')
-    var content = document.getElementById('content');
-    var showSideba = false;
+        </div>
+        </div>
+        <div tabindex="0" onclick="closeSideba()" class="content" id="content">
+        <h1 class="vamos">Vamos escolher</h1>
+        </div>
 
-function toggleSideba()
-{
-   showSideba = !showSideba;
-   if(showSideba)
-   {
-       nagivationescolha.style.marginLeft = '-65vw';
-       nagivationescolha.style.animationName = 'showSidebar';
-       content.style.filter = 'blur(2px)';
-   }
-   else
-   {
-       nagivationescolha.style.marginLeft = '-135vw';
-       nagivationescolha.style.animationName = '';
-       content.style.filter = '';
-   }
-}
-
-function closeSideba()
-{
-   if(showSideba)
-   {
-       toggleSideba();
-   }
-}
-
-window.addEventListener('resize', function(event){
-   if(window.innerWidth > 816 && showSideba)
-   {
-       toggleSideba();
-   }
-});
-</script>
-            
-    
-        
+        <section class="container">
+            <div class="caixa"><img src="imagem/icon cx pra site.png" width="200" alt="logo_perau" id="logo_perau">
+              <div class="local">
+              <h3><a href="logo_identidade_visual.html" class="active-link">Logo identidade e visual</a></h3>
+              <p class="oferta">Super oferta</p>
+              <ul class="coluna">
+                <li>Logo</li>
+                <li>Cartão De Visita</li>
+                <li>Papel Timbrado e Envelope</li>
+                <li>Capa Para Facebook</li>
+              </ul>
+            </div>
+            </div>
+            <div class="caixa"><img src="imagem/icone tela.png" width="200" alt="logo_perau" id="logo_perau">
+           <div class="local">
+          
+            <h3><a href="design_site_app.html" class="active-link">Design de site e aplicativo</a></h3>
+            <p class="oferta">Super oferta</p>
+            <ul class="coluna">
+              <li>Logo e aplicativo</li>
+              <li>Rede social</li>
+              <li>Site totalmente funcional</li>
+              <li>Site personalizado</li>
+            </ul>
+            </div>
+            </div>
+            <div class="caixa"><img src="imagem/icone propaganda.png" width="200" alt="logo_perau" id="logo_perau">
+                <div class="local">
+               
+                 <h3><a href="propaganda.html" class="active-link">Propaganda</a></h3>
+                 <p class="oferta">Super oferta</p>
+                 <ul class="coluna">
+                   <li>Banner,cartaz e outdoor</li>
+                   <li>Folder e panfleto</li>
+                   <li>Propaganda web ou tv</li>
+                   <li>Outra publicidade ou propaganda</li>
+                 </ul>
+                 </div>
+              </div>
+            <div class="caixa"><img src="imagem/sacola03.png" width="200" alt="logo_perau" id="logo_perau">
+              <div class="local">
+              <h3><a href="embalagem_rotulo.html" class="active-link">Embalagem e rótulo</a></h3>
+              <p class="oferta">Super oferta</p>
+              <ul class="coluna">
+                <li>Embalagem de produtos</li>
+                <li>Rótulo de alimentos</li>
+                <li>Rótulo de bebidas</li>
+                <li>Outros embalagem ou rótulo</li>
+              </ul>
+            </div>
+            </div>
+            <div class="caixa"><img src="imagem/icon-livro-revista.png" width="200" alt="logo_perau" id="logo_perau">
+              <div class="local">
+          
+            <h3><a href="livro_revista.html" class="active-link">Livro e revista</a></h3>
+            <p class="oferta">Super oferta</p>
+            <ul class="coluna">
+              <li>Capa de livro e revista</li>
+              <li>Design para interior de livro</li>
+              <li>Layout de livro</li>
+              <li>Outros livro e revista</li>
+            </ul>
+            </div>
+            </div>
+          </section>
     </main>
+        
+
     <footer>
       <div class="foote">
         <div class="foot">
@@ -216,5 +242,4 @@ window.addEventListener('resize', function(event){
     </div>
     <h5>Perau designs Termos de Uso Privacidade português</h5>
     </footer>
-</body>
 </html>
