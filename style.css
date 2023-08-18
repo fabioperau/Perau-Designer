@@ -245,7 +245,7 @@ h1{
 
 .container {
   width: auto;
-  margin: 0 6%;
+  margin: 0 10%;
   border: 0px solid black;
   display: grid;
   grid-template-areas: "item item";
