@@ -245,7 +245,7 @@ h1{
 
 .container {
   width: auto;
-  margin: 0 10%;
+  margin: 0 6%;
   border: 0px solid black;
   display: grid;
   grid-template-areas: "item item";
@@ -296,22 +296,55 @@ margin: 13px 0 0 -50px;
 color: black;
 }
 
-.assunto{
-font-size: 1em;
-margin: 0 30px;
-text-indent: 30px;
-color: black;
-text-align: justify;
-}
-
 .active-link {
   color: var(--cor3);
   padding: 10px;
   border-radius: 10px;
   text-decoration: none;
   font-size: 18px;
-  
 }
+.active-link:hover{
+  color: var(--cor0);
+}
+.assunto {
+  font-size: 1em;
+  margin: 0 30px;
+  text-indent: 30px;
+  color: black;
+  text-align: justify;
+}
+
+.foote{
+  background-image: linear-gradient(to bottom, var(--cor3), var(--cor2));
+  max-width: auto;
+  margin: 0 auto;
+  height: 180px;
+  box-shadow: -1px 1px 10px black;
+  display: grid;
+  grid-template-areas: "item item item";
+  justify-items: center;
+  justify-content: space-evenly;
+}
+
+h4{
+  font-size: 18px;
+  font: bold;
+  margin-top: 30px;
+  margin-bottom: 25px;
+}
+
+ul{
+  margin-left: 17px;
+}
+
+h5{
+  color: black;
+  text-align: center;
+  background-color: #026070;
+  padding: 15px;
+  box-shadow: inset 1px -1px 5px black;
+}
+
 /* Responsividade */ 
 
 @media screen and (max-width: 975px){
