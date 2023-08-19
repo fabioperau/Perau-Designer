@@ -47,11 +47,13 @@ function showSlides() {
   tmr = setTimeout(showSlides, 5000); // Change image every 2 seconds
 }
 
-var totaCarrinho = "500,00"
+let totaCarrinho = document.getElementById("carrinhovalue").innerHTML
 
 function ready(){
   const buttonFinalizar = document.getElementsByClassName("oferta-pag04")[0]
     buttonFinalizar.addEventListener("click", finalizarCompra)
+    const buttonFinalizarImage = document.getElementsByClassName("carrinhoFinalizar")[0]
+    buttonFinalizarImage.addEventListener("click", finalizarCompra)
 }
 
 function finalizarCompra(){
