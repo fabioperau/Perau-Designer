@@ -135,7 +135,7 @@ window.addEventListener('resize', function(event){
            </svg>
        </button>
        <a href="logo_identidade_visual.html" class="active">Logo identidade e visual</a>
-       <a href="design_site_app.html">Design de site e aplicativo</a>
+       <a href="design_site_app.html">Site e aplicativo</a>
        <a href="propaganda.html">Propaganda</a>
        <a href="embalagem_rotulo.html">Embalagem e rótulo</a>
        <a href="livro_revista.html">Livro e revista</a>
@@ -144,7 +144,44 @@ window.addEventListener('resize', function(event){
         <div tabindex="0" onclick="closeSideba()" class="content" id="content">
         <h1 class="vamos">Vamos escolher</h1>
         </div>
-
+        <script>
+          var escolha = document.getElementById('escolha');
+          var nagivationescolha = document.getElementById('nagivation_escolha')
+          var content = document.getElementById('content');
+          var showSideba = false;
+      
+      function toggleSideba()
+      {
+         showSideba = !showSideba;
+         if(showSideba)
+         {
+             nagivationescolha.style.marginLeft = '-65vw';
+             nagivationescolha.style.animationName = 'showSidebar';
+             content.style.filter = 'blur(2px)';
+         }
+         else
+         {
+             nagivationescolha.style.marginLeft = '-135vw';
+             nagivationescolha.style.animationName = '';
+             content.style.filter = '';
+         }
+      }
+      
+      function closeSideba()
+      {
+         if(showSideba)
+         {
+             toggleSideba();
+         }
+      }
+      
+      window.addEventListener('resize', function(event){
+         if(window.innerWidth > 816 && showSideba)
+         {
+             toggleSideba();
+         }
+      });
+      </script>
         <section class="container">
             <div class="caixa"><img src="imagem/icon cx pra site.png" width="200" alt="logo_perau" id="logo_perau">
               <div class="local">
@@ -161,7 +198,7 @@ window.addEventListener('resize', function(event){
             <div class="caixa"><img src="imagem/icone tela.png" width="200" alt="logo_perau" id="logo_perau">
            <div class="local">
           
-            <h3><a href="design_site_app.html" class="active-link">Design de site e aplicativo</a></h3>
+            <h3><a href="design_site_app.html" class="active-link">Site e aplicativo</a></h3>
             <p class="oferta">Super oferta</p>
             <ul class="coluna">
               <li>Logo e aplicativo</li>

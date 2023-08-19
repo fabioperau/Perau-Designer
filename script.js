@@ -1,3 +1,9 @@
+if (document.readyState == "loading"){
+  document.addEventListener("DOMContentLoaded", ready)
+}else{
+  ready()
+}
+
 let slideIndex = 1;
 showSlides(slideIndex);
 
@@ -40,3 +46,24 @@ function showSlides() {
   slides[slideIndex-1].style.display = "block";
   tmr = setTimeout(showSlides, 5000); // Change image every 2 seconds
 }
+
+var totaCarrinho = "500,00"
+
+function ready(){
+  const buttonFinalizar = document.getElementsByClassName("oferta-pag04")[0]
+    buttonFinalizar.addEventListener("click", finalizarCompra)
+}
+
+function finalizarCompra(){
+    if (totaCarrinho == "0,00"){
+        alert("Seu carrinho está vazio!")
+    }else{
+        alert(
+            `
+                Obrigado pela sua compra!
+                Valor do pedido: R$${totaCarrinho}
+                Volte sempre :)
+
+            `
+        )
+    }}

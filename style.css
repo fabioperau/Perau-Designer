@@ -681,7 +681,7 @@ color: var(--cor3);
   color: var(--cor3);
   }
 
-   /* pagina dos serviços 04 */
+   /* pagina dos serviços */
 
    .cx-comp{
     height: 45px;
@@ -689,12 +689,15 @@ color: var(--cor3);
     top: -52px;
     right: -184px;
   }
-  .p-pag04{
+  .p-pag04 {
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
     position: relative;
-    top: 72px;
-    right: 187px;
+    font-weight: bolder;
+    top: 75px;
+    right: 209px;
 }
+
 .img-comp{
   position: relative;
   top: 20px;
@@ -706,12 +709,15 @@ color: var(--cor3);
   background-color: var(--cor3);
   box-shadow: 2px 3px 8px black;
   padding:8px;
+  position: relative;
+  top: -3px;
   margin-left: -52px;
   color: white;
   border-radius: 20px;
   text-decoration: none;
   font-weight: bold;
   font-size: 1em;
+  cursor: pointer;
 }
 
 .oferta-pag04:hover {
@@ -764,7 +770,7 @@ color: var(--cor3);
 }
 /* Responsividade */ 
 
-@media screen and (max-width: 975px){
+@media screen and (max-width: 1001px){
   .nagivation_escolha a{
     text-decoration: none;
     color: var(--color-white);
@@ -780,10 +786,16 @@ color: var(--cor3);
   .nagivation_escolha{
     gap: 10px;
   }
+  .container {
+    margin: 0 5%;
+  }
+  .active-link{
+    font-size: 15px;
+  }
  
 }
 
-@media screen and (max-width: 770px){
+@media screen and (max-width: 847px){
   .btn_icon_header{
       display: block;
   }
@@ -799,8 +811,63 @@ color: var(--cor3);
       margin-left: -100vw;
       border-radius: 10px;
   }
+
+  .btn_icon_escolha{
+    display: block;
+}
+  .nagivation_escolha{
+    position: absolute;
+    flex-direction: column;
+    top: 0;
+    background-color: var(--cor3);
+    height: 45%;
+    width: 35vw;
+    padding: 1em;
+    animation-duration: 1s;
+    margin-left: -135vw;
+    border-radius: 10px;
+    margin-top: 47px;
+  }
+}
+@keyframes showSideba {
+from {margin-left: -135vw;}
+top {margin-left: -65vw;}
 }
 @keyframes showSidebar {
   from {margin-left: -100vw;}
   top {margin-left: -12vw;}
+}
+
+@media (max-width: 830px){
+  .container{
+    justify-content: center;
+    grid-template-areas: 
+    "item";
+  }
+  .vamos{
+   margin: auto;
+  }
+  .caixa {
+    height: 200px;
+}
+.assunto {
+  padding: 16px;
+  margin: 0 5%;
+}
+
+  h2{
+   text-align: center;
+  }
+}
+
+@media screen and (max-width: 520px){
+  .foote{
+    justify-content: space-evenly;
+    grid-template-areas: 
+    "item item";
+    height: auto;
+    padding: 20px;
+    justify-items: normal;
+  }
+  
 }
