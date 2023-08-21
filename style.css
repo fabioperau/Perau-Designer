@@ -514,12 +514,11 @@ color: var(--cor3);
   margin: auto;
   text-align: center;
 }
-.p_pag02{
-  color: black;
+.p_pag02 {
   text-align: justify;
   text-indent: 30px;
-  margin: 30px 70px 30px 70px; 
-  padding: 20px 20px 20px 20px; 
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .cont_pag02{
@@ -683,13 +682,13 @@ color: var(--cor3);
 
    /* pagina dos serviços */
 
-   .cx-comp{
+.cx-comp{
     height: 45px;
     position: relative;
     top: -52px;
     right: -184px;
   }
-  .p-pag04 {
+.p-pag04 {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
     position: relative;
@@ -702,7 +701,7 @@ color: var(--cor3);
   position: relative;
   top: 20px;
   right: 33px;
-}
+  }
 
 .oferta-pag04 {
   width: 121px;
@@ -718,12 +717,12 @@ color: var(--cor3);
   font-weight: bold;
   font-size: 1em;
   cursor: pointer;
-}
+ }
 
 .oferta-pag04:hover {
   background-color: var(--cor0);
   color: var(--cor3);
-}
+ }
 
 .container_pag04{
   width: 100%;
@@ -849,14 +848,36 @@ top {margin-left: -65vw;}
   }
   .caixa {
     height: 200px;
-}
+ }
 .assunto {
   padding: 16px;
   margin: 0 5%;
-}
+ }
 
   h2{
    text-align: center;
+  }
+  .container_pag03 {
+    
+    grid-template-areas: "item";
+  }
+
+  .cont-img {
+    position: relative;
+    top: -85px;
+    right: -89px;
+  }
+  .menu_p{
+    
+    bottom: 60px;
+    left: 22px;
+    
+  }
+  .menu_pag03{
+    
+    bottom: 60px;
+    left: -5px;
+    
   }
 }
 
@@ -870,4 +891,61 @@ top {margin-left: -65vw;}
     justify-items: normal;
   }
   
+}
+@media screen and (max-width: 540px){
+
+ .caixa_pag03{
+    height: 150px;
+    text-align: -webkit-center;
+  }
+  #cont-pag03 {
+    top: 25px;
+    margin-bottom: 65px;
+}
+  .resp {
+  top: -64px;
+}
+.cont-img {
+  top: -55px;
+}
+  .caixa_pag04 {
+    margin: 0 auto;
+    display: contents;
+    align-items: center;
+    grid-area: "item";
+    grid-column: "item";
+  }
+  #icon-caixa {
+    margin-left: auto;
+  }
+  .oferta-pag04 {
+    margin-left: -72px;
+  }
+  .oferta {
+    margin-left: -58px;
+  }
+  .p-pag04 {
+    right: 138px;
+ }
+ .carrinhoFinalizar {
+  width: 81px;
+  position: relative;
+  left: -52px;
+  top: 6px;
+ }
+ .wp {
+  right: 30px;
+  top: -13px;
+ }
+#wp-icon {
+  right: 10px;
+  top: 8px;
+  height: 45px;
+ }
+ .menu_pag02  {
+  bottom: 6px;
+ }
+ #foote-extra{
+  margin-top: 22px;
+ }
 }
