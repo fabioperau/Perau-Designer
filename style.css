@@ -853,6 +853,9 @@ top {margin-left: -65vw;}
   padding: 16px;
   margin: 0 5%;
  }
+ #pergunta {
+  padding-left: 0px;
+}
 
   h2{
    text-align: center;
